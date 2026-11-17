@@ -4,21 +4,21 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 ## 下载
 
-请前往 [FlowDM v0.4.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.4.0)，在 Assets 中按自己的系统下载：
+请前往 [FlowDM v0.5.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.5.0)，在 Assets 中按自己的系统下载：
 
 | 系统 | 下载文件 | 说明 |
 | --- | --- | --- |
-| macOS | `FlowDM-0.4.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
-| Windows | `FlowDM-0.4.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
-| 浏览器插件 | `FlowDM-Browser-Extension-0.4.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
+| macOS | `FlowDM-0.5.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
+| Windows | `FlowDM-0.5.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
+| 浏览器插件 | `FlowDM-Browser-Extension-0.5.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
 
 请不要下载 GitHub 自动生成的 **Source code** 压缩包。这个公开仓库只用于提供下载页面，自动生成的源码包不是可运行的 FlowDM 软件。
 
 ## 文件校验
 
-- macOS Universal：`fcb017c08f02d2e61c9a9a61814cb6998d556752db8c91924428fec6055a2911`
-- Windows x64：`1f41c4a3f1fe1c7735f74eae736200ced7c89937945cf61adc48970dd20c045a`
-- 浏览器插件：`7ef2e561f0b159f166847e4544b12f63526af02849eb34fadc41f293fe0c54b1`
+- macOS Universal：`9aa23d17b1ed120ea567b8039ee55f5f20387b338ade4d7f7e37408ebea8e463`
+- Windows x64：`6fdbccbe2bff1e0904ce2235763407c11f4ec0a6a0570f7679009d2bf83bd473`
+- 浏览器插件：`0a684037d4dda929495febdaaf6b5f1db46454796b9db814894e753b336ca9ea`
 
 ## macOS 安装
 
@@ -53,14 +53,18 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 - Windows 10/11 x64；系统需要 Microsoft Edge WebView2 Runtime
 - Chrome、Edge 或 Arc 浏览器可使用浏览器助手
 
-## v0.4.0 功能
+## v0.5.0 功能
 
-- HTTP/HTTPS 多连接下载、暂停、继续、取消和删除
+- HTTP/HTTPS 动态分段下载，单任务从 8 个连接自适应提升至最多 32 个
+- 遇到服务器连接限制时自动从 32 降至 16、8、4 或 1 个连接重试
+- 最多同时运行 2 个任务，其余任务进入等待队列；全局最多使用 64 个 HTTP 连接
+- 支持优先下载、动态拆分慢分片、断点续传，以及实时连接数、分片和重试指标
+- 暂停、继续、取消并保留数据，以及删除任务和本地分片
 - magnet 磁力链接下载和 DHT/Tracker 节点发现
 - 浏览器普通下载接管和网页媒体资源检测
 - 真正下载 HLS/DASH 分片并通过随应用提供的 FFmpeg 合并为 MP4
 - macOS Universal 与 Windows x64 双平台支持
-- 下载任务持久化、速度、进度、剩余时间和文件列表展示
+- 下载任务持久化、全局实时速度、进度、剩余时间和文件列表展示
 
 ## 使用范围
 
