@@ -4,21 +4,21 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 ## 下载
 
-请前往 [FlowDM v0.6.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.6.0)，在 Assets 中按自己的系统下载：
+请前往 [FlowDM v0.7.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.7.0)，在 Assets 中按自己的系统下载：
 
 | 系统 | 下载文件 | 说明 |
 | --- | --- | --- |
-| macOS | `FlowDM-0.6.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
-| Windows | `FlowDM-0.6.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
-| 浏览器插件 | `FlowDM-Browser-Extension-0.6.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
+| macOS | `FlowDM-0.7.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
+| Windows | `FlowDM-0.7.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
+| 浏览器插件 | `FlowDM-Browser-Extension-0.7.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
 
 请不要下载 GitHub 自动生成的 **Source code** 压缩包。这个公开仓库只用于提供下载页面，自动生成的源码包不是可运行的 FlowDM 软件。
 
 ## 文件校验
 
-- macOS Universal：`43c8fd34cf41041a3b7434b26f834a8c5cdbb2207ddf63c2ade17d678b694ba6`
-- Windows x64：`5dc49b48fec769df561e9f3d33963b0b075d28568d8d1304afce041b1921b4d1`
-- 浏览器插件：`17d24900bea7475ddb069c6d2ca2c996615898d263c47449f904eb2044df3ff2`
+- macOS Universal：`906adbb50660cba9abe33597121a135a8eb78b1f9bc3d60433efb81c633fa900`
+- Windows x64：`6447d899805d4367533c28c5849e9ae4c3376866ebcc07d88128957ee56ba4f7`
+- 浏览器插件：`caf25074c1d1286866594f41f8727f4ed375294d4506aacea519e3b6b16ab1e4`
 
 ## macOS 安装
 
@@ -56,14 +56,24 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 修改默认位置不会移动现有文件，也不会改变已有任务的保存路径；可以随时恢复为系统下载目录。
 
+## 开机自启
+
+1. 打开 FlowDM，点击左下角“设置”。
+2. 打开“开机时自动启动 FlowDM”并保存。
+3. macOS 会注册当前用户的登录启动项，Windows 会注册当前用户的启动项。
+4. 再次关闭并保存会从系统启动列表移除，不影响任务记录和下载文件。
+
+FlowDM 会读取系统中的真实自启状态；若系统启动项修改或设置保存失败，界面会显示明确错误并尽可能恢复原状态。
+
 ## 系统要求
 
 - macOS 12 或更高版本，支持 Apple Silicon 和 Intel Mac
 - Windows 10/11 x64；系统需要 Microsoft Edge WebView2 Runtime
 - Chrome、Edge 或 Arc 浏览器可使用浏览器助手
 
-## v0.6.0 功能
+## v0.7.0 功能
 
+- macOS 和 Windows 均可在应用设置中开启或关闭开机自启，并读取系统真实状态
 - macOS 和 Windows 均可设置默认下载位置，浏览器接管任务不再固定保存到系统下载目录
 - HTTP/HTTPS 动态分段下载，单任务从 8 个连接自适应提升至最多 32 个
 - 遇到服务器连接限制时自动从 32 降至 16、8、4 或 1 个连接重试
