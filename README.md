@@ -4,21 +4,21 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 ## 下载
 
-请前往 [FlowDM v0.5.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.5.0)，在 Assets 中按自己的系统下载：
+请前往 [FlowDM v0.6.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.6.0)，在 Assets 中按自己的系统下载：
 
 | 系统 | 下载文件 | 说明 |
 | --- | --- | --- |
-| macOS | `FlowDM-0.5.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
-| Windows | `FlowDM-0.5.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
-| 浏览器插件 | `FlowDM-Browser-Extension-0.5.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
+| macOS | `FlowDM-0.6.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
+| Windows | `FlowDM-0.6.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
+| 浏览器插件 | `FlowDM-Browser-Extension-0.6.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
 
 请不要下载 GitHub 自动生成的 **Source code** 压缩包。这个公开仓库只用于提供下载页面，自动生成的源码包不是可运行的 FlowDM 软件。
 
 ## 文件校验
 
-- macOS Universal：`9aa23d17b1ed120ea567b8039ee55f5f20387b338ade4d7f7e37408ebea8e463`
-- Windows x64：`6fdbccbe2bff1e0904ce2235763407c11f4ec0a6a0570f7679009d2bf83bd473`
-- 浏览器插件：`0a684037d4dda929495febdaaf6b5f1db46454796b9db814894e753b336ca9ea`
+- macOS Universal：`43c8fd34cf41041a3b7434b26f834a8c5cdbb2207ddf63c2ade17d678b694ba6`
+- Windows x64：`5dc49b48fec769df561e9f3d33963b0b075d28568d8d1304afce041b1921b4d1`
+- 浏览器插件：`17d24900bea7475ddb069c6d2ca2c996615898d263c47449f904eb2044df3ff2`
 
 ## macOS 安装
 
@@ -47,14 +47,24 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 插件通过 `127.0.0.1:16888` 与本机 FlowDM 通信，不会把任务发送到云端。插件不会自动读取或发送 Cookie、Authorization 等登录凭证。
 
+## 默认下载位置
+
+1. 打开 FlowDM，点击左下角“设置”。
+2. 在“默认下载位置”中选择文件夹并保存。
+3. 浏览器任务和未单独选择目录的新任务都会保存到该位置。
+4. 手动新建任务时仍可临时选择其他目录，只覆盖当前任务。
+
+修改默认位置不会移动现有文件，也不会改变已有任务的保存路径；可以随时恢复为系统下载目录。
+
 ## 系统要求
 
 - macOS 12 或更高版本，支持 Apple Silicon 和 Intel Mac
 - Windows 10/11 x64；系统需要 Microsoft Edge WebView2 Runtime
 - Chrome、Edge 或 Arc 浏览器可使用浏览器助手
 
-## v0.5.0 功能
+## v0.6.0 功能
 
+- macOS 和 Windows 均可设置默认下载位置，浏览器接管任务不再固定保存到系统下载目录
 - HTTP/HTTPS 动态分段下载，单任务从 8 个连接自适应提升至最多 32 个
 - 遇到服务器连接限制时自动从 32 降至 16、8、4 或 1 个连接重试
 - 最多同时运行 2 个任务，其余任务进入等待队列；全局最多使用 64 个 HTTP 连接
