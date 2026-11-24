@@ -2,6 +2,10 @@
 
 FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTTPS 多连接下载、磁力链接、浏览器下载接管、网页媒体检测，以及 HLS（`.m3u8`）和 DASH（`.mpd`）视频下载与合并。
 
+## 界面演示
+
+![FlowDM 下载管理器界面与操作演示](assets/flowdm-interface-demo.gif)
+
 ## 下载
 
 请前往 [FlowDM v0.8.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.8.0)，在 Assets 中按自己的系统下载：
