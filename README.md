@@ -8,21 +8,21 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 
 ## 下载
 
-请前往 [FlowDM v0.8.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.8.0)，在 Assets 中按自己的系统下载：
+请前往 [FlowDM v0.9.0](https://github.com/zhangwenlv/FlowDM-Downloads/releases/tag/v0.9.0)，在 Assets 中按自己的系统下载：
 
 | 系统 | 下载文件 | 说明 |
 | --- | --- | --- |
-| macOS | `FlowDM-0.8.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
-| Windows | `FlowDM-0.8.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
-| 浏览器插件 | `FlowDM-Browser-Extension-0.8.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
+| macOS | `FlowDM-0.9.0-macOS-Universal-friends.zip` | 同时支持 Apple Silicon 和 Intel Mac |
+| Windows | `FlowDM-0.9.0-Windows-x64-friends.zip` | 支持 Windows 10/11 x64，包含 EXE 和 MSI |
+| 浏览器插件 | `FlowDM-Browser-Extension-0.9.0.zip` | Chrome、Edge、Arc 可用；两个桌面包中也已包含 |
 
 请不要下载 GitHub 自动生成的 **Source code** 压缩包。这个公开仓库只用于提供下载页面，自动生成的源码包不是可运行的 FlowDM 软件。
 
 ## 文件校验
 
-- macOS Universal：`bb5cfe17a070f26388e2d13b4a55f81adcbff01b68980e0dfd04e964ea20bf9f`
-- Windows x64：`1193cd466ffa8d9c688ecc0c89ba605253bcf743335c239747e8012044619a8c`
-- 浏览器插件：`32e4e7677b643b25177a3a9bc78636e26a4952e351554d1f1955c244f8fcdbd9`
+- macOS Universal：`c60aa1cf528556190325511b7e13d141c67938522df1945a3aecec4016335bd7`
+- Windows x64：`6fffb0eeea917b5647688f7bff5544f69f5976851f1ed3cac950d06a347c4b27`
+- 浏览器插件：`805ae8d89701f121956f504510e720ea76bd3de505c39e973ae60695fa571280`
 
 ## macOS 安装
 
@@ -49,7 +49,7 @@ FlowDM 是一个适用于 macOS 和 Windows 的下载管理器，支持 HTTP/HTT
 3. 打开“开发者模式”，点击“加载已解压的扩展程序”。
 4. 选择桌面安装包脚本显示的 `Browser Extension` 稳定目录。
 
-插件通过 `127.0.0.1:16888` 与本机 FlowDM 通信，不会把任务发送到云端。插件不会自动读取或发送 Cookie、Authorization 等登录凭证。
+插件通过 `127.0.0.1:16888` 与本机 FlowDM 通信，不会把任务发送到云端。浏览器普通下载会先显示 FlowDM 桌面确认窗，只有点击“开始下载”才创建任务；点击“取消下载”或关闭确认窗会彻底放弃该文件。FlowDM 无法接收或显示确认窗时，浏览器原下载会自动恢复。插件不会自动读取或发送 Cookie、Authorization 等登录凭证。
 
 ## 默认下载位置
 
@@ -75,8 +75,13 @@ FlowDM 会读取系统中的真实自启状态；若系统启动项修改或设�
 - Windows 10/11 x64；系统需要 Microsoft Edge WebView2 Runtime
 - Chrome、Edge 或 Arc 浏览器可使用浏览器助手
 
-## v0.8.0 功能
+## v0.9.0 功能
 
+- 浏览器普通下载先显示 FlowDM 桌面确认窗，展示文件名、大小、类型、来源和保存位置
+- 只有点击“开始下载”才创建正式任务；点击“取消下载”或关闭确认窗会直接放弃
+- FlowDM 未运行、文件信息获取失败或确认窗无法显示时，自动恢复浏览器原下载
+- 点击开始后自动切换到下载进度浮窗，继续提供暂停、继续、取消、重试和文件操作
+- macOS 主界面隐藏时，下载确认窗和进度浮窗不会仅因小窗出现就在程序坞显示图标
 - 开机自启时静默进入后台，不再主动显示主界面
 - 关闭主窗口时隐藏到系统托盘或 macOS 菜单栏，可从托盘重新显示或彻底退出
 - 浏览器触发下载时主动弹出独立下载浮窗，即使主界面处于后台也能看到进度
